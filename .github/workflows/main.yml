@@ -13,16 +13,11 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Demo Build
-        run: firebase deploy --only hosting:demo
+        run: npm run build
       - name: Deploy Demo
-        uses: lowply/deploy-firebase@v0.0.2
+        uses: w9jds/firebase-action@master
+        with:
+          args: firebase deploy --only hosting:demo
         env:
           FIREBASE_TOKEN: "1//0gHQjPojPuS4UCgYIARAAGBASNwF-L9Ir5JXBjJPiXJ8DC61GNBcn2zw6P_G3S9t7LUxPJM4T6vd0ANvuRkCJJE1VDzXtHVyWcVo"
           FIREBASE_PROJECT: my-app-c980d
-      - name: Prod Build
-        run: npm run build
-      - name: Deploy Prod
-        uses: lowply/deploy-firebase@v0.0.2
-        env:
-          FIREBASE_TOKEN: "1//0gHQjPojPuS4UCgYIARAAGBASNwF-L9Ir5JXBjJPiXJ8DC61GNBcn2zw6P_G3S9t7LUxPJM4T6vd0ANvuRkCJJE1VDzXtHVyWcVo"
-          FIREBASE_PROJECT: learnnode

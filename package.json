@@ -15,8 +15,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy-demo": "cp -rf development.env .env.production; npm run build; firebase deploy --only hosting:demo",
-    "deploy-prod": "cp -rf staging.env .env.production; npm run build; firebase deploy --only hosting:production"
+    "deploy-demo": "npm run build; firebase deploy --only hosting:demo",
+    "deploy-prod": "npm run build; firebase deploy --only hosting:production"
   },
   "eslintConfig": {
     "extends": "react-app"
