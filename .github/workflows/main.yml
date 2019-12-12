@@ -17,7 +17,7 @@ jobs:
       - name: Deploy Demo
         uses: w9jds/firebase-action@master
         with:
-          args: firebase deploy --only hosting:demo
+          args: deploy --only hosting:demo
         env:
           FIREBASE_TOKEN: "1//0gHQjPojPuS4UCgYIARAAGBASNwF-L9Ir5JXBjJPiXJ8DC61GNBcn2zw6P_G3S9t7LUxPJM4T6vd0ANvuRkCJJE1VDzXtHVyWcVo"
           FIREBASE_PROJECT: my-app-c980d
