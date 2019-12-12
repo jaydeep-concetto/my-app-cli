@@ -14,10 +14,19 @@ jobs:
         run: npm install
       - name: Demo Build
         run: npm run build
-      - name: Deploy Demo
+      - name: Demo Deploy
         uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting:demo
+        env:
+          FIREBASE_TOKEN: "1//0gHQjPojPuS4UCgYIARAAGBASNwF-L9Ir5JXBjJPiXJ8DC61GNBcn2zw6P_G3S9t7LUxPJM4T6vd0ANvuRkCJJE1VDzXtHVyWcVo"
+          FIREBASE_PROJECT: my-app-c980d
+      - name: Prod Build
+        run: npm run build
+      - name: Prod Deploy
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting:prod
         env:
           FIREBASE_TOKEN: "1//0gHQjPojPuS4UCgYIARAAGBASNwF-L9Ir5JXBjJPiXJ8DC61GNBcn2zw6P_G3S9t7LUxPJM4T6vd0ANvuRkCJJE1VDzXtHVyWcVo"
           FIREBASE_PROJECT: my-app-c980d
