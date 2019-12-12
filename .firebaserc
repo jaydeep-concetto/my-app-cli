@@ -8,7 +8,7 @@
         "demo": [
           "my-app-c980d"
         ],
-        "production": [
+        "prod": [
           "learnnode"
         ]
       }
