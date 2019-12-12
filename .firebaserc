@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "my-app-c980d"
+  },
+  "targets": {
+    "my-app-c980d": {
+      "hosting": {
+        "demo": [
+          "my-app-c980d"
+        ],
+        "production": [
+          "learnnode"
+        ]
+      }
+    }
   }
 }
