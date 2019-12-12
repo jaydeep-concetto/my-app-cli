@@ -13,6 +13,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
+        uses: lowply/deploy-firebase@v0.0.2
         run: npm run deploy-demo
       - name: Build2
+        uses: lowply/deploy-firebase@v0.0.2
         run: npm run deploy-prod
